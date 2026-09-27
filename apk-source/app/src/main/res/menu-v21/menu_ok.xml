@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:textStyle="italic|bold"
+        android:textColor="#002208"
+        android:id="@+id/title_bar"
+        android:background="#52fc03"
+        android:title="Cliquez sur votre choix"
+        android:textAlignment="center"
+        android:backgroundTint="#07fd17"/>
+    <item
+        android:id="@+id/Add_Comment_men"
+        android:title="Add Comment"
+        android:showAsAction="withText|ifRoom"/>
+    <item
+        android:id="@+id/View_Comments_men"
+        android:title="View All Comment"
+        android:showAsAction="withText|ifRoom"/>
+</menu>

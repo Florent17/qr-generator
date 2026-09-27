@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="5.1"
+    package="com.elvalere.ihs_civportfolio"
+    platformBuildVersionCode="23"
+    platformBuildVersionName="6.0-2704002">
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity android:name="com.elvalere.ihs_civportfolio.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.MainActivity"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+        <activity
+            android:label="@string/title_activity_maps"
+            android:name="com.elvalere.ihs_civportfolio.Maps_Activity.MapsActivity2"/>
+        <activity
+            android:label="@string/title_activity_maps"
+            android:name="com.elvalere.ihs_civportfolio.Maps_Activity.MapsActivity3"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.MainActivity2"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.MainActivity3"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.MainActivity4"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.MainActivityFin"/>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.elvalere.ihs_civportfolio.Site_Tracker_BDD.TodoListActivity"/>
+        <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"
+            android:label="@string/app_name"
+            android:name="com.elvalere.ihs_civportfolio.Site_Tracker_BDD.ModifyTodoActivity"/>
+        <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"
+            android:label="@string/app_name"
+            android:name="com.elvalere.ihs_civportfolio.Site_Tracker_BDD.AddTodoActivity"/>
+        <service android:name="com.elvalere.ihs_civportfolio.Services.LocationUpdaterService"/>
+        <service android:name="com.elvalere.ihs_civportfolio.Services.Portfolio_Update"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.Main_Synchro"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.Site_View"/>
+        <activity android:name="com.elvalere.ihs_civportfolio.Main.Autres_App"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/Theme.IAPTheme"
+            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <activity
+            android:theme="@style/Theme.AppInvite.Preview"
+            android:name="com.google.android.gms.appinvite.PreviewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"/>
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:exported="false"
+            android:authorities="com.elvalere.ihs_civportfolio.google_measurement_service"/>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+    </application>
+</manifest>
