@@ -1,0 +1,29 @@
+.class Lcom/elvalere/ihs_civportfolio/Maps_Activity/b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/elvalere/ihs_civportfolio/Maps_Activity/MapsActivity2;
+
+
+# direct methods
+.method constructor <init>(Lcom/elvalere/ihs_civportfolio/Maps_Activity/MapsActivity2;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/elvalere/ihs_civportfolio/Maps_Activity/b;->a:Lcom/elvalere/ihs_civportfolio/Maps_Activity/MapsActivity2;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
+
+    return-void
+.end method

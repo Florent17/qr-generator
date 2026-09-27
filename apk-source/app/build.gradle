@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId 'com.elvalere.ihs_civportfolio'
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "5.1"
+        useLibrary 'org.apache.http.legacy'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildFeatures {
+        buildConfig = false
+    }
+}
+
+dependencies {
+    // Bibliothèques détectées dans l'APK (versions de 2016)
+    implementation 'com.android.support:appcompat-v7:23.4.0'
+    implementation 'com.google.android.gms:play-services-maps:8.4.0'
+    implementation 'com.google.android.gms:play-services-location:8.4.0'
+    implementation 'com.google.android.gms:play-services-ads:8.4.0'
+    implementation 'com.google.android.gms:play-services-appinvite:8.4.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.14.0'
+}

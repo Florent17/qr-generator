@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#873cff27"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="7dp"
+            android:textStyle="italic"
+            android:textColor="#002208"
+            android:id="@+id/Update_View"
+            android:background="#fbefbd"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+        <TableRow
+            android:background="#107600"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="11dp"
+                android:textStyle="italic|bold"
+                android:textColor="#002208"
+                android:background="#52fc03"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_column="11"
+                android:text="Votre Site Name / ID en dessous"
+                android:textAlignment="center"/>
+            <Button
+                android:textSize="7dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/btncomp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_column="12"
+                android:text="Compare Sites"
+                android:onClick="onClick"/>
+            <Button
+                android:textSize="7dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/btn_update2"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_column="13"
+                android:text="Check Update"
+                android:onClick="onClick"/>
+        </TableRow>
+        <TableRow
+            android:background="#107600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:enabled="true"
+                android:textStyle="italic|bold"
+                android:textColor="#023b0d"
+                android:id="@+id/myFilter"
+                android:background="#c6fcbe"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="11"
+                android:hint=" "
+                android:ems="10"
+                android:singleLine="true"
+                android:autoText="false">
+                <requestFocus/>
+            </EditText>
+            <ToggleButton
+                android:enabled="true"
+                android:textSize="7dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/toggleButton"
+                android:layout_width="70dp"
+                android:layout_height="32dp"
+                android:checked="false"
+                android:textOn="Search Site ID"
+                android:textOff="Search Site Name"
+                android:layout_column="12"
+                android:text="On For ID"/>
+            <Button
+                android:textSize="7dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/btnVComm"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_column="13"
+                android:text="View Comments"
+                android:onClick="onClick"/>
+        </TableRow>
+    </TableLayout>
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"/>
+</LinearLayout>
